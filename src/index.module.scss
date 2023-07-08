@@ -1,0 +1,54 @@
+@use "src/styles/variables" as var;
+
+*,
+*::after,
+*::before {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #{var.$primary-color};
+  --secondary-color: #{var.$secondary-color};
+  --tertiary-color: #{var.$tertiary-color};
+  --text-color: #{var.$text-color};
+  --primary-bg: #{var.$webpage-bg};
+  --outline-white: #{var.$outline-white};
+  --fs-d-heading1: #{var.$fsHeading1};
+  --fs-d-heading2: #{var.$fsHeading2};
+  --fs-d-heading3: #{var.$fsHeading3};
+  --fs-d-heading4: #{var.$fsHeading4};
+  --fs-d-content: #{var.$fsContent};
+  --fs-d-paragraph: #{var.$fsParagraph};
+  --fs-d-text: #{var.$fsText};
+  --fs-d-subtext: #{var.$fsSubText};
+  --fs-d-small: #{var.$fsSmall};
+  --fs-m-heading1: #{var.$fsMobHeading1};
+  --fs-m-heading2: #{var.$fsMobHeading2};
+  --fs-m-heading3: #{var.$fsMobHeading3};
+  --fs-m-heading4: #{var.$fsMobHeading4};
+  --fs-m-content: #{var.$fsMobContent};
+  --fs-m-paragraph: #{var.$fsMobParagraph};
+  --fs-m-text: #{var.$fsMobText};
+  --fw-light: #{var.$fwLight}; //300
+  --fw-normal: #{var.$fwNormal}; //400
+  --fw-medium: #{var.$fwMedium}; //500
+  --fw-semibold: #{var.$fwSemiBold}; //600
+  --fw-bold: #{var.$fwBold}; //700
+  --font-poppins: #{var.$fontPoppins};
+  --font-swanky: #{var.$fontSwanky};
+}
+
+html,
+body {
+  overflow-x: hidden;
+  font-family: var(--font-poppins);
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+section {
+  margin: 0px auto;
+  max-width: 1000px;
+}

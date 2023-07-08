@@ -1,0 +1,25 @@
+@use "/src/styles/global" as global;
+
+.social-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 50px;
+  top: 50%;
+  gap: 24px;
+  translate: 10% -50%;
+  @include global.md {
+    left: 20px;
+  }
+  > a {
+    color: var(--text-color);
+    margin: 0rem 1rem;
+    svg {
+      vertical-align: middle;
+    }
+  }
+  > a:hover {
+    cursor: pointer;
+  }
+}

@@ -1,17 +1,21 @@
-//component imports
-import Main from "./components/main/Main";
-import Footer from "./components/footer/Footer";
+import React, { useState } from "react";
 
-//css imports
-import styles from "./App.module.css";
+import Loader from "./components/Loader/Loader.jsx";
+import Homepage from "./pages/Homepage/Homepage.jsx";
+import styles from "./App.module.scss";
 
-function App() {
+const App = () => {
+  let [backgroundDisplay, updateBackgroundDisplay] = useState(true);
+
+  setTimeout(() => {
+    updateBackgroundDisplay(false);
+  }, 3);
+
   return (
-    <div id={styles["app"]}>
-      <Main></Main>
-      <Footer></Footer>
+    <div className={styles["app"]}>
+      {backgroundDisplay ? <Loader /> : <Homepage />}
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,14 @@
+@use "/src/styles/global" as global;
+
+.homepage-container {
+  background-image: var(--primary-bg);
+  .mainContent {
+    max-width: 1600px;
+    margin: auto;
+    min-height: 100vh;
+    padding: 0px 150px;
+    @include global.md {
+      padding: 0px 120px;
+    }
+  }
+}
