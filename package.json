@@ -1,14 +1,17 @@
 {
-  "name": "portfolio_ver1",
-  "version": "1.0.0",
+  "name": "portfolio_v1",
+  "version": "0.0.1",
   "description": "My Personal Portfolio - Lokesh Ravindran",
+  "homepage": "https://LokeshRavindran.github.io/lokeshravindran.github.io",
   "main": "index.js",
   "scripts": {
     "build": "webpack --env mode=production",
-    "serve": "webpack serve --env mode=development"
+    "serve": "webpack serve --env mode=development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
-  "author": "Lokesh Ravindran",
+  "author": "<lokeshravindran3003@gmail.com> Lokesh Ravindran",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.19.3",
@@ -16,6 +19,7 @@
     "@babel/preset-react": "^7.18.6",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
     "sass": "^1.55.0",
