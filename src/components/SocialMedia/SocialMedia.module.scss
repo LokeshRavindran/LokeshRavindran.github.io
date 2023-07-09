@@ -8,18 +8,29 @@
   left: 50px;
   top: 50%;
   gap: 24px;
-  translate: 10% -50%;
+  translate: 50% -50%;
   @include global.md {
     left: 20px;
   }
   > a {
     color: var(--text-color);
-    margin: 0rem 1rem;
     svg {
       vertical-align: middle;
     }
   }
   > a:hover {
     cursor: pointer;
+  }
+  @include global.md {
+    left: 20px;
+  }
+  @include global.sm {
+    position: absolute;
+    flex-direction: row;
+    translate: -50% 0%;
+    justify-content: center;
+    top: initial;
+    left: 50%;
+    bottom: 20px;
   }
 }

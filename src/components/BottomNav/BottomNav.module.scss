@@ -21,7 +21,7 @@
         font-size: var(--fs-d-subtext);
         font-weight: var(--fw-normal);
         white-space: nowrap;
-        transform: rotate(-4deg) translate(-18px, -40px);
+        transform: rotate(-6deg) translate(-18px, -40px);
         background-color: var(--tertiary-color);
       }
     }
@@ -29,28 +29,28 @@
   .exp {
     &:hover {
       &:before {
-        transform: rotate(-4deg) translate(0px, -40px);
+        transform: rotate(-6deg) translate(0px, -40px);
       }
     }
   }
   .proj {
     &:hover {
       &:before {
-        transform: rotate(-4deg) translate(-18px, -40px);
+        transform: rotate(-6deg) translate(-18px, -40px);
       }
     }
   }
   .skills {
     &:hover {
       &:before {
-        transform: rotate(-4deg) translate(-20px, -40px);
+        transform: rotate(-6deg) translate(-20px, -40px);
       }
     }
   }
   .cont {
     &:hover {
       &:before {
-        transform: rotate(-4deg) translate(-18px, -40px);
+        transform: rotate(-6deg) translate(-18px, -40px);
       }
     }
   }

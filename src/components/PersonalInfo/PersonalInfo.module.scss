@@ -1,3 +1,5 @@
+@use "/src/styles/global" as global;
+
 .infoSection {
   height: 100vh;
   display: flex;
@@ -5,6 +7,7 @@
   justify-content: center;
   color: var(--text-color);
   padding: 80px 0px 20px 0px;
+  position: relative;
   &-welcome {
     display: flex;
     align-items: center;
@@ -17,7 +20,17 @@
     p {
       font-size: var(--fs-d-heading2);
       font-family: var(--font-swanky);
-      line-height: 67px;
+      line-height: 153%;
+    }
+    @include global.sm {
+      gap: 12px;
+      img {
+        height: 37px;
+        width: 37px;
+      }
+      p {
+        font-size: var(--fs-m-heading3);
+      }
     }
   }
   &-about {
@@ -33,6 +46,11 @@
       color: var(--outline-white);
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke: 2px;
+    }
+    @include global.sm {
+      h1 {
+        font-size: var(--fs-m-heading1);
+      }
     }
   }
   &-intro {
@@ -50,6 +68,13 @@
         height: 20px;
         translate: 0px 5px;
       }
+    }
+    @include global.sm {
+      font-size: var(--fs-m-content);
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
   }
 }

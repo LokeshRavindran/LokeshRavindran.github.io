@@ -1,0 +1,30 @@
+.mobNav {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 200px;
+  background: rgba($color: #ffffff, $alpha: 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 20;
+  &-close {
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+  }
+  &-parent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    &-item {
+      margin: 1.5rem 0rem;
+      a {
+        color: var(--text-color);
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -11,13 +11,24 @@
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 10;
   @include global.md {
     padding: 0px 20px;
+  }
+  @include global.sm {
+    padding: 0px 1rem;
   }
   &-left {
     height: 50px;
     img {
       height: 100%;
+      transform: translate(-12%, 0%);
+      cursor: pointer;
+    }
+  }
+  &-right {
+    svg {
+      cursor: pointer;
     }
   }
 }

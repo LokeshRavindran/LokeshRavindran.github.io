@@ -2,8 +2,10 @@ import React from "react";
 
 import styles from "./PersonalInfo.module.scss";
 import BottomNav from "../BottomNav/BottomNav.jsx";
+import Resume from "../Resume/Resume.jsx";
+import SocialMedia from "../socialMedia/SocialMedia.jsx";
 
-const PersonalInfo = () => {
+const PersonalInfo = ({ isMobile }) => {
   return (
     <section className={styles["infoSection"]}>
       <div className={styles["infoSection-welcome"]}>
@@ -35,7 +37,8 @@ const PersonalInfo = () => {
           ></img>
         </p>
       </div>
-      <BottomNav />
+      {isMobile ? <Resume /> : <BottomNav />}
+      {isMobile && <SocialMedia />}
     </section>
   );
 };

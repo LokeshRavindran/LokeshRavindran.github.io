@@ -10,5 +10,8 @@
     @include global.md {
       padding: 0px 120px;
     }
+    @include global.sm {
+      padding: 0px 1rem;
+    }
   }
 }
