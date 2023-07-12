@@ -5,9 +5,13 @@ import { FiGithub } from "react-icons/fi";
 // style imports
 import styles from "./SocialMedia.module.scss";
 
-const SocialMedia = () => {
+const SocialMedia = ({ isFooter }) => {
   return (
-    <div className={styles["social-container"]}>
+    <div
+      className={`${styles["social-container"]} ${
+        isFooter ? styles["social-row"] : ""
+      }`}
+    >
       <a href="https://github.com/LokeshRavindran" target="_blank">
         <FiGithub size="1.5rem" title="github" />
       </a>

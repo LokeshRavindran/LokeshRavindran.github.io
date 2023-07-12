@@ -15,6 +15,7 @@
   --text-color: #{var.$text-color};
   --primary-bg: #{var.$webpage-bg};
   --outline-white: #{var.$outline-white};
+  --text-grey: #{var.$text-grey};
   --fs-d-heading1: #{var.$fsHeading1};
   --fs-d-heading2: #{var.$fsHeading2};
   --fs-d-heading3: #{var.$fsHeading3};
@@ -46,6 +47,7 @@ body {
   font-family: var(--font-poppins);
   min-height: 100vh;
   min-width: 100vw;
+  color: var(--text-color);
 }
 
 section {

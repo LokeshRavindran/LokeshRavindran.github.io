@@ -1,0 +1,15 @@
+.tagContainer {
+  &-para {
+    font-size: var(--fs-d-content);
+    font-family: var(--font-swanky);
+    &-content {
+      font-family: var(--font-poppins);
+      font-size: var(--fs-d-heading4);
+      font-weight: var(--fw-normal);
+    }
+    .heading {
+      font-size: var(--fs-d-heading2);
+      font-weight: var(--fw-bold);
+    }
+  }
+}

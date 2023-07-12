@@ -1,0 +1,37 @@
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  &-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    &-info {
+      background-color: rgba(160, 164, 171, 0.1);
+      padding: 2rem;
+      border-radius: 10px;
+      margin-top: 1.5rem;
+      img {
+        height: 88px;
+        width: 88px;
+      }
+      p {
+        font-size: var(--fs-d-heading4);
+        font-weight: var(--fw-medium);
+        margin-top: 0.5rem;
+        img {
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
+  }
+  &-maps {
+    background-color: black;
+    height: 200px;
+  }
+  &-form {
+    background-color: black;
+    height: 200px;
+  }
+}

@@ -6,7 +6,7 @@ import Resume from "../Resume/Resume.jsx";
 
 const Header = ({ isMobile, mobileNav, toggleMobileNav }) => {
   return (
-    <div className={styles["header"]}>
+    <header className={styles["header"]}>
       <div className={styles["header-left"]}>
         <img src={require("../../assets/logo.png")} alt="logo" />
       </div>
@@ -25,7 +25,7 @@ const Header = ({ isMobile, mobileNav, toggleMobileNav }) => {
           <Resume />
         )}
       </div>
-    </div>
+    </header>
   );
 };
 

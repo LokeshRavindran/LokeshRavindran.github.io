@@ -17,6 +17,7 @@
       position: relative;
       &:before {
         content: "Work in progress";
+        padding: 0px 0.25rem;
         position: absolute;
         font-size: var(--fs-d-subtext);
         font-weight: var(--fw-normal);

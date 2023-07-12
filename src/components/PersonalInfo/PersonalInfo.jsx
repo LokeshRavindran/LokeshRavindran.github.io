@@ -34,11 +34,11 @@ const PersonalInfo = ({ isMobile }) => {
           <img
             src={require("../../assets/smileys/winking-face-with-tongue.png")}
             alt="smiley-tongue-out"
-          ></img>
+          />
         </p>
       </div>
       {isMobile ? <Resume /> : <BottomNav />}
-      {isMobile && <SocialMedia />}
+      {isMobile && <SocialMedia isFooter={false} />}
     </section>
   );
 };
