@@ -4,10 +4,14 @@ import styles from "./ContactMe.module.scss";
 import HeadingTags from "../HeadingTags/HeadingTags.jsx";
 import Maps from "../Maps/Maps.jsx";
 import ContactForm from "../ContactForm/ContactForm.jsx";
+import { SECTION_IDS } from "../../common/constants";
 
 const ContactMe = () => {
   return (
-    <section className={styles["contactSection"]} id="contact-me">
+    <section
+      className={styles["contactSection"]}
+      id={SECTION_IDS.CONTACT_SECTION}
+    >
       <div className={styles["contactSection-details"]}>
         <HeadingTags tag={"h2"} content={"Contact Me"} isHeading={true} />
         <div>

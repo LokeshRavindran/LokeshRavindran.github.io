@@ -2,8 +2,15 @@ import React from "react";
 import { IoClose } from "react-icons/io5";
 
 import styles from "./MobNav.module.scss";
+import { scrollIntoView } from "../../helper/helper";
+import { SECTION_IDS } from "../../common/constants";
 
 const MobNav = ({ toggleMobileNav }) => {
+  const scrollHandler = (sectionID) => {
+    scrollIntoView(sectionID);
+    toggleMobileNav();
+  };
+
   return (
     <nav className={styles["mobNav"]}>
       <div className={styles["mobNav-close"]}>
@@ -16,23 +23,26 @@ const MobNav = ({ toggleMobileNav }) => {
       </div>
       <ol className={styles["mobNav-parent"]}>
         <li className={styles["mobNav-parent-item"]}>
-          <a href="">About</a>
+          <span>About</span>
           <hr />
         </li>
         <li className={styles["mobNav-parent-item"]}>
-          <a href="">Experience</a>
+          <span>Experience</span>
           <hr />
         </li>
         <li className={styles["mobNav-parent-item"]}>
-          <a href="">Projects</a>
+          <span>Projects</span>
           <hr />
         </li>
         <li className={styles["mobNav-parent-item"]}>
-          <a href="">Skills</a>
+          <span>Skills</span>
           <hr />
         </li>
-        <li className={styles["mobNav-parent-item"]}>
-          <a href="">Contact</a>
+        <li
+          className={styles["mobNav-parent-item"]}
+          onClick={scrollHandler.bind(this, SECTION_IDS.CONTACT_SECTION)}
+        >
+          <span>Contact</span>
           <hr />
         </li>
       </ol>

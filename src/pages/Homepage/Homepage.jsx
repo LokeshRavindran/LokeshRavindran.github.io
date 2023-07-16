@@ -13,10 +13,10 @@ import { MOBILE_BREAK_POINT } from "../../common/constants";
 const Homepage = () => {
   const { windowWidth } = useWindowSize();
   const isMobile = windowWidth < MOBILE_BREAK_POINT; // mobile device breakpoint 320px — 480px
-  const [mobileNav, toggleMobileNav] = useReducer((prevState) => {
-    console.log("checking");
-    return !prevState;
-  }, false);
+  const [mobileNav, toggleMobileNav] = useReducer(
+    (prevState) => !prevState,
+    false
+  );
 
   return (
     <div className={styles["homepage-container"]}>

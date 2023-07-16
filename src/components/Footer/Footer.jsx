@@ -2,12 +2,17 @@ import React from "react";
 
 import styles from "./Footer.module.scss";
 import SocialMedia from "../socialMedia/SocialMedia.jsx";
+import { scrollToTop } from "../../helper/helper";
 
 const Footer = () => {
   return (
     <footer className={styles["footer"]}>
       <div className={styles["footer-info"]}>
-        <img src={require("../../assets/logo.png")} alt="logo" />
+        <img
+          src={require("../../assets/logo.png")}
+          alt="logo"
+          onClick={scrollToTop}
+        />
         <p>Lokesh Ravindran</p>
         <SocialMedia isFooter={true} />
       </div>

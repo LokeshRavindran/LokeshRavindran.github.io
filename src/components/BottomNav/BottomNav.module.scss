@@ -51,7 +51,8 @@
   .cont {
     &:hover {
       &:before {
-        transform: rotate(-6deg) translate(-18px, -40px);
+        content: "Let's Connect";
+        transform: rotate(-6deg) translate(-8px, -40px);
       }
     }
   }

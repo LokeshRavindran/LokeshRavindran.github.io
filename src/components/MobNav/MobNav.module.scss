@@ -21,9 +21,8 @@
     color: var(--secondary-color);
     &-item {
       margin: 1.5rem 0rem;
-      a {
+      span {
         color: var(--text-color);
-        text-decoration: none;
       }
     }
   }
