@@ -1,0 +1,38 @@
+@use "/src/styles/global" as global;
+
+@mixin formElement {
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background: transparent;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  font-size: var(--fs-d-text);
+}
+
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  &-top {
+    display: flex;
+    gap: 1rem;
+    & > * {
+      flex: 1;
+    }
+    @include global.sm {
+      flex-direction: column;
+    }
+  }
+  .form-element {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: var(--fs-d-text);
+    input {
+      @include formElement;
+    }
+    textarea {
+      @include formElement;
+    }
+  }
+}

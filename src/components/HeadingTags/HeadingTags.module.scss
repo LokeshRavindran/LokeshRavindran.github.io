@@ -1,3 +1,5 @@
+@use "/src/styles/global" as global;
+
 .tagContainer {
   &-para {
     font-size: var(--fs-d-content);
@@ -10,6 +12,16 @@
     .heading {
       font-size: var(--fs-d-heading2);
       font-weight: var(--fw-bold);
+    }
+  }
+  @include global.sm {
+    &-para {
+      &-content {
+        font-size: var(--fs-m-heading4);
+      }
+      .heading {
+        font-size: var(--fs-m-heading2);
+      }
     }
   }
 }

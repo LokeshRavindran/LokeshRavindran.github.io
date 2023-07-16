@@ -2,6 +2,8 @@ import React from "react";
 
 import styles from "./ContactMe.module.scss";
 import HeadingTags from "../HeadingTags/HeadingTags.jsx";
+import Maps from "../Maps/Maps.jsx";
+import ContactForm from "../ContactForm/ContactForm.jsx";
 
 const ContactMe = () => {
   return (
@@ -21,19 +23,19 @@ const ContactMe = () => {
             alt={"smiley-relieved-face"}
           />
           <p>
-            If you are interested in hiring me or wanted to discuss anything
-            over a cup of coffee{" "}
+            If you are interested in hiring me or wanted to discuss anything or
+            wanted to say hello{" "}
             <img
               src={require("../../assets/smileys/winking-face-with-tongue.png")}
               alt="smiley-tongue-out"
             />
             , please provide the following details so that i can connect with
-            you
+            you.
           </p>
         </div>
       </div>
-      <div className={styles["contactSection-maps"]}>maps</div>
-      <form className={styles["contactSection-form"]}>form</form>
+      <Maps />
+      <ContactForm />
     </section>
   );
 };

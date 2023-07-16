@@ -9,7 +9,7 @@ const App = () => {
 
   setTimeout(() => {
     updateBackgroundDisplay(false);
-  }, 3000);
+  }, 3);
 
   return (
     <div className={styles["app"]}>

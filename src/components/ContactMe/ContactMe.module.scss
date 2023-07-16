@@ -1,3 +1,5 @@
+@use "/src/styles/global" as global;
+
 .contactSection {
   display: flex;
   flex-direction: column;
@@ -10,28 +12,36 @@
       background-color: rgba(160, 164, 171, 0.1);
       padding: 2rem;
       border-radius: 10px;
-      margin-top: 1.5rem;
+      margin-top: 2rem;
+      text-align: center;
       img {
         height: 88px;
         width: 88px;
+        @include global.sm {
+          height: 64px;
+          width: 64px;
+        }
       }
       p {
         font-size: var(--fs-d-heading4);
         font-weight: var(--fw-medium);
         margin-top: 0.5rem;
+        text-align: left;
         img {
           height: 24px;
           width: 24px;
         }
       }
+      @include global.sm {
+        padding: 1rem;
+        p {
+          font-size: var(--fs-m-heading4);
+          img {
+            height: 20px;
+            width: 20px;
+          }
+        }
+      }
     }
-  }
-  &-maps {
-    background-color: black;
-    height: 200px;
-  }
-  &-form {
-    background-color: black;
-    height: 200px;
   }
 }
