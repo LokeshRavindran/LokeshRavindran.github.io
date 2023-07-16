@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Install and Build 🔧
         run: |
-          npm ci
+          npm c
           npm run build
         env:
           LOCATION: ${{ secrets.LOCATION }}
