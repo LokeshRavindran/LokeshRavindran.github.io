@@ -1,6 +1,8 @@
 name: Portfolio Deployment
 
-on: [workflow_dispatch]
+on:
+  push:
+    branches: [ "portfolio_v1" ]
 
 jobs:
   build-and-deploy:
