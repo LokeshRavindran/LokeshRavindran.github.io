@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./PersonalInfo.module.scss";
 import BottomNav from "../BottomNav/BottomNav.jsx";
 import Resume from "../Resume/Resume.jsx";
-import SocialMedia from "../socialMedia/SocialMedia.jsx";
+import SocialMedia from "../SocialMedia/SocialMedia.jsx";
 
 const PersonalInfo = ({ isMobile }) => {
   return (

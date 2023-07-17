@@ -4,7 +4,7 @@ import Header from "../../components/Header/Header.jsx";
 import PersonalInfo from "../../components/PersonalInfo/PersonalInfo.jsx";
 import ContactMe from "../../components/ContactMe/ContactMe.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
-import SocialMedia from "../../components/socialMedia/SocialMedia.jsx";
+import SocialMedia from "../../components/SocialMedia/SocialMedia.jsx";
 import MobNav from "../../components/MobNav/MobNav.jsx";
 import styles from "./Homepage.module.scss";
 import { useWindowSize } from "../../hooks/useWindowSize.jsx";

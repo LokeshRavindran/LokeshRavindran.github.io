@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./Footer.module.scss";
-import SocialMedia from "../socialMedia/SocialMedia.jsx";
+import SocialMedia from "../SocialMedia/SocialMedia.jsx";
 import { scrollToTop } from "../../helper/helper";
 
 const Footer = () => {
