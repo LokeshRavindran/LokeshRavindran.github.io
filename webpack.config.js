@@ -7,12 +7,15 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = (env) => {
   const devMode = env.mode === "development";
 
-  // config to access env variables from .env
-  const envVar = dotenv.config().parsed;
-  const envKeys = Object.keys(envVar).reduce((prev, next) => {
-    prev[next] = JSON.stringify(envVar[next]);
-    return prev;
-  }, {});
+  let envKeys = {};
+  if (devMode) {
+    // config to access env variables from .env
+    const envVar = dotenv.config().parsed;
+    envKeys = Object.keys(envVar).reduce((prev, next) => {
+      prev[next] = JSON.stringify(envVar[next]);
+      return prev;
+    }, {});
+  }
 
   return {
     mode: env.mode,
@@ -77,11 +80,12 @@ module.exports = (env) => {
       ],
     },
     plugins: [
-      new webpack.DefinePlugin({
-        process: {
-          env: envKeys,
-        },
-      }),
+      devMode &&
+        new webpack.DefinePlugin({
+          process: {
+            env: envKeys,
+          },
+        }),
       new HtmlWebpackPlugin({
         title: "Lokesh Ravindran",
         filename: "index.html",
