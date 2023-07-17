@@ -1,0 +1,30 @@
+name: Portfolio Deployment
+
+on:
+  push:
+    branches:
+      - portfolio_v1
+
+jobs:
+  Build_and_Deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Install and Build 🔧
+        run: |
+          npm i
+          npm run build
+        env:
+          LOCATION: ${{ secrets.LOCATION }}
+          PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
+          SERVICE_ID: ${{ secrets.SERVICE_ID }}
+          TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
