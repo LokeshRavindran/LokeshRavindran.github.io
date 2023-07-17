@@ -9,7 +9,7 @@ on:
       - portfolio_v1
 
 jobs:
-  Build:
+  Build and Deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,8 +26,8 @@ jobs:
           TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
 
       - name: Deploy 🚀
-        uses: actions/deploy-pages@v1
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           folder: dist
