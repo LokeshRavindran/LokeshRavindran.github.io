@@ -8,6 +8,9 @@ on:
     branches:
       - portfolio_v1
 
+permissions:
+  contents: write
+
 jobs:
   Build and Deploy:
     runs-on: ubuntu-latest
@@ -28,6 +31,5 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           folder: dist
